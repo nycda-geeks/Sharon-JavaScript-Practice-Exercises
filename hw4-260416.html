@@ -59,10 +59,11 @@ starsSquare(5);
 // Find and return average
 
 function average(array){
+	var sum = 0;
 	for(i=0;i<array.length;i++){
-		var sum =+ array[i];
+		sum += array[i];
 	}
-	var average = sum / (array.length+1);
+	var average = sum / (array.length);
 	return average;
 }
 
