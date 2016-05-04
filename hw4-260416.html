@@ -1,5 +1,7 @@
 <script>
 
+// Return area circle
+
 function areaCircle(r){
 	var area = Math.PI * Math.pow(r, 2);
 	return area;
@@ -10,6 +12,8 @@ console.log("If radius is 4, the area is: " + areaCircle(4));
 console.log("If radius is 2, the area is: " + areaCircle(2));
 
 
+// Return last character string
+
 function lastChar(string){
 	return string.charAt(string.length-1);
 }
@@ -18,6 +22,8 @@ console.log("Second function: last character string ");
 console.log("Last character of string 'Hello there!' = " + lastChar("Hello there!"));
 console.log("Last character of string 'Tom is a boss' = " + lastChar("Tom is a boss"));
 
+
+// Print stars length
 
 function stars(length){
 	var a = "";
@@ -31,6 +37,8 @@ console.log("Third function: print an amount of stars ");
 console.log("Make 4 stars: " + stars(4));
 console.log("Make 8 stars: " + stars(8));
 
+
+// Print stars square
 
 function starsSquare(length){
 	for(i=0;i<length;i++){
@@ -48,35 +56,30 @@ console.log("Print a square of 5: ")
 starsSquare(5);
 
 
-function average(first,second,third){
-	return (first+second+third)/3;
+// Find and return average
+
+function average(array){
+	for(i=0;i<array.length;i++){
+		var sum =+ array[i];
+	}
+	var average = sum / (array.length+1);
+	return average;
 }
+
 console.log("");
 console.log("Fifth function: average of numbers");
-console.log("1,2,3: " + average(1,2,3));
-console.log("2,6,20: " + average(2,6,20));
+
+var numbers = [5,6,7,8];
+var others = [5,5,5,5,5];
+console.log("First array: " + average(numbers));
+console.log("Second array: " + average(others));
 
 
-// var first=[1,2,3];
-// var second=[5,2,4];
-// function sameNumber(){
-// 	for(var i=0;i<first.length;i++){
-// 	for(var j=0;j<second.length;j++){
-// 		if(first[i]===second[i]){
-// 			console.log(first[i]);
-// 		}else if(first[i]===second[i+1]){
-// 			console.log(first[i]);
-// 		}else if(first[i]===second[i+2]){
-// 			console.log(first[i])
-// 		}else{
-// 			console.log("nothing found")
-// 		}
-// 	}}
-// }
-
+// Optional Challenge: return largest common integer
 
 var first=[1,2,3];
 var second=[5,2,4];
+
 function sameNumber(){
 	var same = false;
 	var highest = 0;
@@ -96,6 +99,7 @@ function sameNumber(){
 		console.log('Same number: ' + highest);
 	}
 }
+
 console.log("");
 console.log("Optional challenge: compare first and second array");
 sameNumber();
